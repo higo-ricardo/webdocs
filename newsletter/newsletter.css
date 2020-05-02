@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+
+
+/*
+	Hivercar by Riko Melo
+	rikomelo@outlook.com | @ogih_
+	Webdesigner
+*/
+
+/******************CONFIGURAÇÕES BASICAS DOS ELEMENTOS SEMÂNTICOS**********************/
+
+
+body{
+    background-color: #ccc;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: wrap;
+    
+
+    transition: opacity 250ms ease-in-out;
+    -webkit-transition: opacity 250ms ease-in-out;
+    -moz-transition: opacity 250ms ease-in-out;
+    -o-transition: opacity 250ms ease-in-out;
+    -ms-transition: opacity 250ms ease-in-out;
+    
+    
+ 
+  
+   
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conteudo{
+    width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+/*ATRIBUTOS GERAIS DA DIV*/
+.news{
+  
+   
+    position: relative;
+    top: 0px;
+	margin: 4em auto;
+    width: 100%;
+    height: 125px;
+    
+    background:#006699;
+    padding: 3px;
+   
+}
+
+.news form{
+    display: block;
+  
+     /* Apenas para centralizar o form na página */
+    margin: 0px 5px 15px 10px;
+  
+    /* Para ver as bordas do formulário */
+    padding: 0 5px 5px 10px;
+    position: relative;
+	width: 50%;
+   
+    border-radius: 40/10px;
+    -moz-border-radius: 40/10px;
+    -webkit-border-radius: 40/10px;
+ }
+ .news h4{
+   font-size: 1.05em;;
+     text-align: center;
+     text-transform: uppercase;
+    margin-top: 10px;
+   
+    top:15px;
+    
+     font-weight: bolder;
+ }
+
+ .news input[type=email]{
+     border-radius: 40/10px;
+     color: #292929;
+   
+     background:#cccccc;
+   margin-top: 6px;
+     width: 400px;
+    padding: 15px;
+  
+    top:75px:
+  
+ }
+ input:focus[type=email], input:hover[type=email] {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: rgb(1, 154, 224);
+    width: 450px;
+}
+ button[type=submit]{
+  
+  
+    border-radius: 40/10px;
+    color: #fdb813;
+    background-color: green;
+   
+    height: 50px;
+    width: 100px;
+    margin-top: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    
+ }
