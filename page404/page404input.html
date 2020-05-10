@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>HIVECAR</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400italic,600italic,100,200,300,400,600" rel="stylesheet" type="text/css">
+    <!-- FontAweSome -->
+	<script src="https://kit.fontawesome.com/b513bb70e8.js" crossorigin="anonymous"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/page404button.css"/>
+    <script language="JavaSript">
+    
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('a[href="#top"]').fadeIn();
+        } else {
+            $('a[href="#top"]').fadeOut();
+        }
+    });
+
+    $('a[href="#top"]').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+});
+    
+
+</script>
+</head>
+<!--FIM DO HEAD-->
+
+<body>
+    
+    <div class="container">
+        <form> 
+            <input type="button" value="VOLTAR" onClick="history.go(-1)"> 
+            <input type="button" value="AVANÇAR" onCLick="history.forward()"> 
+            <input type="button"  class="btn btn-lg" value="RENOVAR" onClick="history.go(0)"> 
+        </form>
+	</div>
+
+    
+    <div class="row">
+        <div class="circles">
+
+            <p>Error 404<br>
+              <small>A página não foi encontrada. :(</small>
+             </p>
+             <span class="circle big"></span>
+             <span class="circle med"></span>
+             <span class="circle small"></span>
+         </div>     
+    </div>
+
+    
+    
+       
+    
+    
+   
+           
+
+
+         
+      
+
+       
+        
+
+
+
+
+
+
+</body>
+</html>
