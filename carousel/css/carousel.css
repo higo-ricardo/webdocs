@@ -1,0 +1,25 @@
+
+html, body, header, nav, section{
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+   
+    
+  }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+
+
+/*----------------------------*\
+SLIDER
+\*----------------------------*/
+

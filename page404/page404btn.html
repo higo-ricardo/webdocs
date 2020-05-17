@@ -12,7 +12,7 @@
 	<script src="https://kit.fontawesome.com/b513bb70e8.js" crossorigin="anonymous"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/page404button.css"/>
+    <link type="text/css" rel="stylesheet" href="css/page404btn.css"/>
     <script language="JavaSript">
     
     $(document).ready(function(){
@@ -38,24 +38,23 @@
 <body>
     
     <div class="container">
-        <form> 
-            <input type="button" value="VOLTAR" onClick="history.go(-1)"> 
-            <input type="button" value="AVANÇAR" onCLick="history.forward()"> 
-            <input type="button"  class="btn btn-lg" value="RENOVAR" onClick="history.go(0)"> 
-        </form>
-	</div>
-
-    
-    <div class="row">
-        <div class="circles">
-
-            <p>Error 404<br>
-              <small>A página não foi encontrada. :(</small>
-             </p>
-             <span class="circle big"></span>
-             <span class="circle med"></span>
-             <span class="circle small"></span>
-         </div>     
+        
+	  
+        <div class="row">
+            <div class="row"> 
+                <button type="button"  class="atualizar btn btn-lg" onClick="history.go(0)">ATUALIZAR</button>
+                <button type="button"  class="voltar btn btn-lg" onClick="history.go(-1)">VOLTAR</button>
+                <button type="button"  class="avançar btn btn-lg" onClick="history.formward">AVANÇAR</button>
+            </div>
+            <div class="circles">
+               <p>Error 404<br>
+                  <small>A página não foi encontrada. :(</small>
+                 </p>
+                 <span class="circle big"></span>
+                <span class="circle med"></span>
+                <span class="circle small"></span>
+            </div>     
+        </div>
     </div>
 
     
