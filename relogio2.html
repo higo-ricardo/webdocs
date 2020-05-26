@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Veja abaixo a hora atual atualizada a cada segundo:</p>
+
+<button onclick="meuRelogio()">Iniciar Relógio</button>
+
+<button onclick="pararRelogio()">Parar Relógio</button>
+
+<h2 id='rel'></h2>
+
+<script>
+
+var temporizador;
+
+function meuRelogio() {
+	var hora = new Date().toLocaleTimeString();
+    document.getElementById('rel').innerHTML = hora;
+    temporizador = setTimeout(meuRelogio, 1000);
+}
+
+function pararRelogio() {
+	clearTimeout(temporizador);
+}
+
+</script>
+
+</body>
+</html>

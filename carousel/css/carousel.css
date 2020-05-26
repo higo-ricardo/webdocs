@@ -1,13 +1,14 @@
 
-html, body, header, nav, section{
+html, body{
   margin: 0px;
   padding: 0px;
-  
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
    
+   width: 100%;
+   height: 100%;
     
   }
 
@@ -18,8 +19,11 @@ ul, ol {
   
 }
 
-
 /*----------------------------*\
 SLIDER
 \*----------------------------*/
 
+
+#carrossel{
+  margin: 20px;
+}

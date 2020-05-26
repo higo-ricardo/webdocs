@@ -13,22 +13,36 @@ ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
-  
 }
 
     
 /*----------------------------*\
-ESTILIZAÇÃO DOS LINKS
+ESTILIZAÇÃO DO FONTAWESOME
 \*----------------------------*/
-i[class="fab fa-facebook"]{color: #3b5998;}
+.footer-payments li i, .footer-links li i {
+  font-size: 32px;
+  display: inline;
+}
 
-i[class="fab fa-instagram"]{color: #c32aa3;}
+i[class*="facebook"]{
+  color: #1877f2;
+}
 
-i[class="fab fa-twitter"]{color: #1da1f2;}
+i[class*="instagram"]{
+  color: #c32aa3;
+}
 
-i[class="fab fa-instagram"]{color: #c32aa3;}
+i[class*="twitter"]{
+  color: #1da1f2;
+}
 
-
+i[  class*="youtube"]{
+    color: #ff0000;
+  }
+a, a:hover, a:focus{
+  color: #f5f8fa;
+  text-decoration: none;
+}
 
 /*----------------------------*\
 	OBJETOS
@@ -43,36 +57,44 @@ i[class="fab fa-instagram"]{color: #c32aa3;}
 	RODAPÉ
 \*----------------------------*/
 .page-footer{
-background-color: #292b2c;
+  background-color: #292b2c;
+  color: #f5f8fa;
+  padding: 20px 0px;
+  margin-top: 20px;
 }
 
-.footer-copyright, .footer li a, .footer h3,.footer-payments li i{
-  text-decoration: none;
-  font-weight: medium;
-
-}
-
-.footer li a{
-    font-size: 14px;
-}
-
-footer h3{
-   font-size: 20px;
+.page-footer h3{
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
+   margin-top: 20px;
+  padding-bottom: 5px;
 }
 
 .footer-copyright{
-    font-size: 12px;
+  background-color: #292b2c;
+  color: #f5f8fa;
+  border-top: 2px solid  #f5f8fa;
+  padding: 20px 0px 0px 0px;
+  margin-top: 20px;
+  
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  word-spacing: 3px;
 }
-  .footer-links li, .footer-payments li {
-    display: inline-block;
-    margin-right: 8px;
-   
-  }
 
+.footer-payments li a{
+  color: #f5f8fa;
+  text-decoration: none;
+ 
+}
+.footer-links li, .footer-payments li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
   
-  .footer-payments li i, .footer-links li i {
-  
-    font-size: 32px;
-    display: inline;
-  }
+}
+
   

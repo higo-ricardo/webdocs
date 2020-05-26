@@ -1,0 +1,49 @@
+// Inicialização das variaveis a serem utilizadas no contador regressivo
+var ano = 2017;
+var mes = 07;
+var dias = 07;
+var horas = 00;
+var minutos = 00;
+var segundos = 00;
+
+
+function iniciaContador(){
+    var hoje = new Date();
+    var futuro = new Date(ano, mes-1, dias, horas, minutos, segundos);
+    
+     //A contagem para saber quanto falta para acabar o tempo.
+     var segundos = parseInt((futuro - hoje) / 1000);
+     var minutos = parseInt(segundos / 60);
+     var horas = parseInt(minutos / 60);
+     var dias = parseInt(horas / 24);
+     
+    if(dias < 10){ // Caso o número de dias seja inferior a 10, acrecenta o digito 0 nantes dele
+        dias = "0"+ dias;
+        dias = dias.substr(0, 2);
+    }
+    if (dias> 0) {
+        document.getElementById('contador').innerHTML = FALTAM;
+        setTimeout(iniciaContador,1000);
+    }    else {
+            document.getElementById('contador').innerHTML = EXPIRADO;
+            setTimeout(iniciaContador,1000);
+        }
+    if(horas <=9){ // Caso o número de horas seja inferior a 9, acrecenta o digito 0 antes dele
+        horas = "0" + horas;
+    }
+    
+    if(minutos <=10){ // Caso o número de minutos seja inferior a 9, acrecenta o digito 0 antes dele
+        minutos = "0" + minutos;
+    }
+    
+    if(segundos <=10){ // Caso o número de minutos seja inferior a 9, acrecenta o digito 0 antes dele
+        segundos = "0" + segundos;
+    }
+ 
+    //Exibir na tela quantos dias faltam
+    document.getElementById("countdown").innerHTML = days + "days ";
+    document.getElementById("countdown").innerHTML += hours + "hrs ";
+    document.getElementById("countdown").innerHTML += minutes + "mins ";
+    document.getElementById("countdown").innerHTML += seconds + "secs";
+   
+ }
