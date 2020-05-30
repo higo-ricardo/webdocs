@@ -17,55 +17,39 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center text-uppercase mt-3 mb-3">HORA CERTA</h1>
+                    <h1 class="text-center text-uppercase">HORA CERTA</h1>
                     <div class="row">
+<!--COLUNA 1 COM RELÓGIO-->
                         <div class="col">
                             <h2 id="relogio"></h2>
-                            <div class="row">
-                               <div class="col text-center">
-                                    <button class="btn btn-outline-dark" id="botao" onclick="ocultarRelogio()">OCULTAR|EXIBIR</button>
-                                </div>
-                            </div>
+                            <button class="btn-outline-dark" id="botao" onclick="ocultarRelogio()">OCULTAR|EXIBIR</button>
+                        </div>
+<!--COLUNA 2 COM CRONÔMETRO-->
+                        <div class="col">
+                        
                         </div>
                     </div>
                 </div>
-               
             </div>
-              
-          
-               
-                <!--<button onclick="pararRelogio()">Parar Relógio</button>-->
-        
         </div>
-<!-- Javascript TIMER -->
-	    <script type="text/javascript">
-            var intervalo = setInterval(function (){
-	            var hora = new Date().toLocaleTimeString();
-                document.getElementById("relogio").innerHTML = hora;
-                }, 1000); //variável que atauliza o relógio
-            
-        
-          
-            /*function pararRelogio() {clearInterval(intervalo);}*/
-        </script>
-   <script>
-        var visibilidade = true;
-        function ocultarRelogio() {
-        if(visibilidade) {  
-            document.getElementById("relogio").style.display = "none";
-          
-            visibilidade = false;
-            } else {  
-                document.getElementById("relogio").style.display = "block";
-                visibilidade = true;
+<!-- Javascript RELÓGIO-->
+        <script type="text/javascript">
+            var relogio = setInterval(function (){
+                var agora = new Date().toLocaleTimeString();
+                document.getElementById("relogio").innerHTML = agora;
+                }, 1000); //variável que atualiza o relógio
+            // variavel que controla o botão
+                var visibilidade = true;
+            function ocultarRelogio() {
+                if(visibilidade) {  
+                    document.getElementById("relogio").style.display = "none";
+                    visibilidade = false;
+                } else {  
+                    document.getElementById("relogio").style.display = "block";
+                    visibilidade = true;
                 }     
-        }
-/*function pararRelogio() {clearInterval(intervalo);}*/
-   </script>  
-</script>
-         	<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/principal.js"></script>
-    </body>
+            }
+        </script>
+<!-- jQuery Plugins -->
+	</body>
 </html>

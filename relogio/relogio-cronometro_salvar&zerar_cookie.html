@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="format-detection" content="telephone=no"/>
+        <!--LINKS EXTERNOS-->
+       
+        
+        <link href="css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="css/relogio-digital-1.css"/>
+    </head>
+    <body onload="verificarCookie()">
+        <div class="container">
+            <div class="row">
+                <!--COLUNA 1 COM RELÓGIO-->
+                <div id="one" class="col">
+                    <h5 class=""">RELÓGIO</h5>
+                    <span id="relogio"></span>
+                    <button id="btn-1" class="inverse"  onclick="ocultarRelogio()">OCULTAR</button>
+                </div>
+                <!--COLUNA 2 COM CRONÔMETRO-->
+                <div id="two" class="col">
+                    <h5>CRONÔMETRO</h5>
+                    <div id="cronometro" class="row"></div>
+                    <div class="row">
+                        <div class="col">
+                            <button id="btn-2" class="faded" onclick="start()">INICIAR</button>
+                            <button class="faded" onclick="salvar()">SALVAR</button>
+                            <button class="faded" onclick="zerar()">ZERAR</button>
+                        </div>
+                    </div>
+                    
+                    <div id="resultados" class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="cookies" class="col"></div>
+            <div id="resumo" class="col"></div>
+        </div>
+<!-- Javascript RELÓGIO-->
+        <script type="text/javascript">
+            var relogio = setInterval(function (){
+                var agora = new Date().toLocaleTimeString();
+                document.getElementById("relogio").innerHTML = agora;
+                }, 1000); //variável que atualiza o relógio
+            // variavel que controla o botão
+                var visibilidade = true;
+            function ocultarRelogio() {
+                if(visibilidade) {  
+                    document.getElementById("relogio").style.display = "none";
+                    visibilidade = false;
+                } else {  
+                    document.getElementById("relogio").style.display = "block";
+                    visibilidade = true;
+                }     
+            }
+        </script>
+        <script type="text/javascript">
+         function addZero(n){
+             return (n < 10 ? '0' : '') + n;
+             }
+        var display = document.getElementById("cronometro");
+        display.innerHTML=addZero(horas)+":"+addZero(minutos)+":"+addZero(segundos)+":"+addZero(milesimos);
+           
+           
+            function salvar(){
+                document.getElementById("resultados").style.display = "block";
+                document.getElementById('resultados').innerHTML += "RESULTADO: "+document.getElementById('cronometro').firstChild.data + "<br>";
+            }
+            function zerar(){
+                document.getElementById("resultados").style.display = "block";
+                document.getElementById('resultados').innerHTML += "RESULTADO: "+document.getElementById('cronometro').firstChild.data + "<br>";
+                window.clearInterval(timer); 
+                document.getElementById('cronometro').innerHTML = "00:00:00:00";
+               
+            }
+            </script>
+
+            <script type="text/javascript">
+ function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 5 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function verificarCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 1);
+      document.getElementById('cookies').innerHTML = "O cookie foi criado com sucesso, "+username;  
+    }
+  }
+}
+function verCookies(){
+var x = "Cookies Enabled: " + navigator.cookieEnabled;
+document.getElementById('cookies').innerHTML = x;  
+}
+</script>
+
+<!-- jQuery Plugins -->
+	</body>
+</html>
