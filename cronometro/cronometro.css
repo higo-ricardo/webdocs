@@ -1,0 +1,88 @@
+@font-face {
+    font-family: ArcadeClassic;
+    src: url("..ARCADECLASSIC.ttf");
+    }
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(83, 81, 80);
+    font-family: 'ARCADECLASSIC';
+    }
+
+/*----------------------------*\
+CRONÔMETRO
+\*----------------------------*/
+.container{
+    background-color: #ebebe3;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+.row{
+    margin-top: 0.25em 0em;
+    margin-bottom: 1em;
+    width: 100%;
+    
+}
+
+.col{
+    border-bottom: 2px solid red;
+}
+@media only screen and (min-width : 320px) {
+    h5{
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.0em;
+    color: rgb(83, 81, 80);
+    margin-top: 1em;
+    font-family: 'LLPIXEL3';
+}
+div span{
+    background-color: rgb(83, 81, 80);
+    color: #ebebe3;
+}
+    #display, #resultados{
+    display:block;
+    margin: 0.45em 0.25em;
+    padding: 0.15em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 7%;
+    width: 100%;
+    }
+}
+
+@media only screen and (min-width : 801px) {
+    h5{
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: rgb(83, 81, 80);
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+    div span{
+        background-color: rgb(83, 81, 80);
+        color: #ebebe3;
+    }
+#display, #resultados{
+
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    border-radius: 7%;
+    display: block;
+    width: 55%;
+    }
+}

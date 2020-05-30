@@ -23,15 +23,15 @@ var countDownDate = new Date("Nov 27, 2020 00:00:00").getTime();
         
         document.getElementById("contador").innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds + "s";
 
-        function pad(n) {
+        function zero(n) {
             return (n < 10 ? '0' : '') + n;
           // If the count down is over, write some text 
         }
           if (distance < 0) {
             clearInterval(x);
-            document.getElementById("dias").innerHTML = pad(days) + "EX";
-              document.getElementById("horas").innerHTML = pad(hours) + "PI";
-              document.getElementById("minutos").innerHTML = pad(minutes) + "RA";
-            document.getElementById("segundos").innerHTML = pad(seconds) + "DO";
+            document.getElementById("dias").innerHTML = zero(days) + "EX";
+              document.getElementById("horas").innerHTML = zero(hours) + "PI";
+              document.getElementById("minutos").innerHTML = zero(minutes) + "RA";
+            document.getElementById("segundos").innerHTML = zero(seconds) + "DO";
           }
         }, 1000);
