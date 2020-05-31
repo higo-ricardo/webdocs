@@ -10,7 +10,7 @@
         
         <link href="css/responsive.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link type="text/css" rel="stylesheet" href="css/relogio-digital-1.css"/>
+        <link type="text/css" rel="stylesheet" href="css/watch-cronometer_save&&reset1.css"/>
     </head>
     <body>
         <div class="container">
@@ -19,7 +19,12 @@
                 <div id="one" class="col">
                     <h5 class=""">RELÓGIO</h5>
                     <span id="relogio"></span>
-                    <button id="btn-1" class="inverse"  onclick="ocultarRelogio()">OCULTAR</button>
+                    <div class="row">
+                        <div class="col">
+                            <button id="btn-1" class="inverse"  onclick="ocultarRelogio()">OCULTAR</button>
+                        </div>
+                    </div>
+
                 </div>
                 <!--COLUNA 2 COM CRONÔMETRO-->
                 <div id="two" class="col">
@@ -28,13 +33,29 @@
                     <div class="row">
                         <div class="col">
                             <button id="btn-2" class="faded" onclick="iniciar()">INICIAR </button>
-                            <button class="faded" onclick="salvar()">SALVAR</button>
-                            <button class="faded" onclick="zerar()">ZERAR</button>
+                            <button id="btn-3" class="faded" onclick="salvar()">SALVAR</button>
+                            <button id="btn-4" class="faded" onclick="zerar()">ZERAR</button>
                         </div>
                     </div>
                     
                     <div id="resultados" class="row"></div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="three" class="col">
+                    <h3>TAREFAS EM PROGRESSO</h3>
+                    <div class="row">
+                        <div class="col topicos"></div>
+                    </div>
+                    <input id="tarefa" type="text" name="tarefa" placeholder="Escreve uma tarefa">
+                    <button id="adicionar" type="submit" class="femme">ADICIONAR</button>
+                    <button id="apagar" type="submit" class="femme">EXCLUIR</button>
+                </div>
+                <div id="three" class="col-">
+                    <h3>TAREFAS REALIZADAS</h3>
+                    <ul id="checked"></ul>
+                    <button id="apagar" type="submit" class="femme">EXCLUIR</button>
                 </div>
             </div>
         </div>
@@ -81,7 +102,8 @@
                         milesimos = 0;
                     }
                     function zero(n){return (n < 10 ? '0' : '') + n;}
-                
+                    document.getElementById('btn-4').disabled=false;
+                    
                 }
                 document.getElementById('cronometro').innerHTML= zero(horas)+":"+zero(minutos)+":"+zero(segundos)+":"+milesimos;
             },10);
@@ -92,12 +114,34 @@
                 document.getElementById('resultados').innerHTML += "RESULTADO: "+document.getElementById('cronometro').firstChild.data + "<br>";
             }
             function zerar(){
+                document.getElementById("resultados").style.display = "block";
+                document.getElementById('resultados').innerHTML += "RESULTADO: "+document.getElementById('cronometro').firstChild.data + "<br>";
                 window.clearInterval(timer); 
                 document.getElementById('cronometro').innerHTML = "00:00:00:00";
-                document.getElementById("resultados").style.display = "block";
+                document.getElementById('btn-4').disabled=true;
             }
-
             </script>
+            
+            <script type="text/javascript"> 
+
+                var escrever = document.getElementById("tarefa");
+                var add = document.getElementById("adicionar");
+                var excluir = document.getElementById("apagar");
+
+                add.addEventListener("click", function(){
+                    var novoItem = document.createElement("p");
+                    var escreverTexto = document.createTextNode(escrever.value);
+                    novoItem.appendChild(escreverTexto);
+                    document.querySelector(".topicos").appendChild(novoItem);
+                                                        });
+
+                excluir.addEventListener("click", function(){
+                    document.querySelector(".topicos").innerHTML = "";
+                    var item = document.getElementById("checked").lastChild;
+                    var clone = item.cloneNode(true);
+                    document.getElementById(".topicos").appendChild(clone);
+                                                        })
+            </script> 
 <!-- jQuery Plugins -->
 	</body>
 </html>

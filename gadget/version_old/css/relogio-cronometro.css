@@ -37,7 +37,7 @@ RELÓGIO
   color:#292b2c;
   text-align: center;
 }
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 299px) {
   h5{
     font-size: 0.75em;
     text-align: center;
