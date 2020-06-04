@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400);
+
+/*@font-face {
+  font-family: ARCADE_N;
+  src: url("../ARCADE_N.ttf");
+}*/
+
+@font-face {
+  font-family: DS-DIGIB;
+  src: url("../DS-DIGIB.ttf");
+  
+}
+html, body{
+  margin: 0em;
+  padding: 0.05em;
+}
+
+body{
+  width: 100%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-color:  rgba(62, 69, 81, 0.1);
+  background-color:  #0C6FF2;
+}
+
+button{
+  margin: 1em auto;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+ul{
+  font-size: 1em;
+  font-size: bold;
+  color: #f0ad4e;
+  list-style: none;
+}
+
+/*----------------------------*\
+RELÓGIO
+\*----------------------------*/
+.container{
+  margin: 2em auto;
+}
+
+input{
+  width: 49vh; 
+  height: 7vh; 
+  background: rgb(235, 235, 237);
+  color: rgb(78, 88, 81);
+  margin: 1em auto; 
+  padding-left: 0.75em; 
+  letter-spacing: 1px; 
+  margin: 1em auto;
+  font-size: 1em;  
+  border-bottom: 3px solid #F8B1C1;
+  }
+
+@media only screen and (min-width : 299px) {
+  h5{
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5em auto;
+    letter-spacing: 0.12em;
+  }
+  /*RELÓGIO*/
+  #one{
+    background-color: #292b2c;
+    color: greenyellow;
+    text-align: center;
+  }
+  #btn-1{
+    background-color:greenyellow;
+    color:#292b2c;  
+  }
+  /*CRONÔMETRO*/
+  #two{
+    background-color: #880e4f;
+    color: #e53935;
+
+  }
+  #relogio, #cronometro{
+    margin: 0.5em auto;
+    padding: auto 0.5em;
+    font-family: 'DS-DIGIB';
+    font-size: 4em;
+    font-weight: bolder;
+  }
+  /*TAREFAS EM PROGRESSO*/
+  #three{
+    background: rgb(78, 88, 81);
+    color: #F8B1C1;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .tarefa-item {
+    padding-left: 0.25em;
+    font-size: 1.40em;
+  }
+  .tarefa-item:hover {
+    background-color: #f7f7f7;
+  }
+
+@media only screen and (min-width : 799px) {
+  h5{
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5em auto;
+    letter-spacing: 0.12em;
+  }
+  /*RELÓGIO*/
+  #one{
+    background-color: #292b2c;  
+    color: greenyellow;
+    }
+  #btn-1{
+    background-color:greenyellow;
+    color:#292b2c;  
+  }
+  /*CRONÔMETRO*/
+  #two{
+    background-color: #880e4f;
+    color: #e53935;
+  }
+  #relogio,  #cronometro{
+    margin: 0.5em auto;
+    padding: auto 0.5em;
+    font-family: 'DS-DIGIB';
+    font-size: 5em;
+    font-weight: bolder;
+  }
+/*TAREFAS EM PROGRESSO*/
+  #three{
+    background:rgb(78, 88, 81);
+    color: #F8B1C1;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 25px;
+  }
+  .tarefa-item {
+    padding-left: 0.25em;
+    font-size: 1.40em;
+    text-align: justify;
+    text-transform: uppercase;
+  }
+  .tarefa-item:hover {
+    background-color: #F8B1C1;
+    font-weight: bold;
+    color: rgb(78, 88, 81);
+  }
+  .tarefa-delete {
+    width: 14px;
+    height: 14px;
+    background-image: url("../images/delete.gif");
+    background-repeat: no-repeat;
+    content: " \u00D7";
+    display: block;
+    float: right;
+    visibility: hidden;
+  }
+  
+  .tarefa-item:hover .tarefa-delete {
+    visibility: visible;
+  }
+}
+/*SPINNER*/
+.loading {text-align: center;}
+
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.75em;
+    height: 0.75em;
+    margin: 3em auto;
+    background-color: #f0ad4e;
+    border-radius: 50px;
+    animation: loader 0.75s infinite alternate;
+  }
+    .loading span:nth-of-type(2) {animation-delay: 0.25s;}
+    .loading span:nth-of-type(3) {animation-delay: 0.5s;}
+}
+  @keyframes loader {
+  0% {
+      width: 0.75em;
+      height: 0.75em;
+      opacity: 0.85;
+      transform: translateY(0);
+  }
+
+  100% {
+      width: 1em;
+      height: 1em;
+      opacity: 0.15;
+      transform: translateY(-20px);
+  }
+}
+
+  @keyframes loader {
+  0% {
+      width: 0.75em;
+      height: 0.75em;
+      opacity: 0.85;
+      transform: translateY(0);
+  }
+
+  100% {
+      width: 1em;
+      height: 1em;
+      opacity: 0.15;
+      transform: translateY(-20px);
+  }
+}
